@@ -28,7 +28,7 @@ Documentar mi proceso de aprendizaje, experimentar con técnicas y herramientas 
 ## 📚 Asignaturas
 
 - [Procesamiento de imágenes](https://github.com/Lalita635/TSCDIA-2025/tree/main/Procesamiento_de_imagenes)
-- [Modelos de IA](https://github.com/Lalita635/TSCDIA-2025/tree/main/Modeos_de_IA))
+- [Modelos de IA](https://github.com/Lalita635/TSCDIA-2025/tree/main/Modeos_de_IA)
 - [Minería de Datos](#)
 
 
