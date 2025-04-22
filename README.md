@@ -25,6 +25,12 @@ Este espacio está dedicado a almacenar, organizar y compartir todo el trabajo q
 Documentar mi proceso de aprendizaje, experimentar con técnicas y herramientas del campo de la ciencia de datos, y dejar registro de mis avances académicos y proyectos personales.
 
 ---
+## 📚 Asignaturas
+
+- [Procesamiento de imágenes](https://github.com/Lalita635/TSCDIA-2025/tree/main/Procesamiento_de_imagenes)
+- [Modelos de IA](#)
+- [Minería de Datos](#)
+
 
 📌 *Este repositorio se irá actualizando con regularidad a lo largo del año.*
 
