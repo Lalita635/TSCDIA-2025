@@ -1,26 +1,26 @@
-# Función para rotar imagen
+# modificaciones.py
+# Copyright (c) 2025 M. Laura Peralta
+# Todos los derechos reservados.
+
+
+# Rotar
 def rotar_imagen(img_cv2, imagenes_rotadas, contador_rotaciones):
     from PIL import Image
 
     angulo = float(input("Ingrese el ángulo de rotación (en grados): "))
 
-    # Convertir a imagen PIL
     img_pil = Image.fromarray(img_cv2)
 
-    # Rotar la imagen (expand=True evita el recorte)
     img_rotada = img_pil.rotate(-angulo, expand=True)
 
-    # Guardar imagen
     nombre_archivo = f"rotada_{contador_rotaciones}.jpg"
     img_rotada.save(nombre_archivo)
-
-    # Guardar en la lista para mostrar después
     titulo = f"Rotación #{contador_rotaciones} ({angulo}°)"
     imagenes_rotadas.append((img_rotada, titulo))
     print(f"{titulo} guardada como '{nombre_archivo}'.")
 
 
-# Función para recortar imagen
+# Recortar
 def recortar_imagen(img_cv2, imagenes_recortadas, contador_recortes):
     from PIL import Image
     
@@ -76,37 +76,32 @@ def recortar_imagen(img_cv2, imagenes_recortadas, contador_recortes):
     imagenes_recortadas.append((img_recortada, titulo))
     print(f"{titulo} guardado como '{nombre_archivo}'.")
     
-# Función para aplicar desenfoque gaussiano
+# Blur
 def desenfoque_gaussiano(img_cv2, imagenes_desenfocadas, contador_blur):
     from PIL import Image, ImageFilter
 
-    # Convertir la imagen de OpenCV a PIL
     img_pil = Image.fromarray(img_cv2)
 
-    # Elegir radio de desenfoque
+    # Radio de desenfoque
     radio = 5
     opcion = input("\n¿Desea utilizar el radio por defecto (5)? (Si o No): ")
 
     if opcion.lower() == "si":
-        pass  # usa el valor por defecto
+        pass
     elif opcion.lower() == "no":
         radio = int(input("Ingrese el radio a utilizar: "))
     else:
         print("Opción no válida. Se usará el valor por defecto.")
     
-    # Aplicar el desenfoque
     img_blur = img_pil.filter(ImageFilter.GaussianBlur(radius=radio))
 
-    # Guardar imagen
     nombre = f"blur_{contador_blur}.jpg"
     img_blur.save(nombre)
-
-    # Guardar en la lista para visualizar
     titulo = f"Desenfoque #{contador_blur} (radio={radio})"
     imagenes_desenfocadas.append((img_blur, titulo))
     print(f"{titulo} guardada como '{nombre}'.")
 
-# Detección de bordes con PIL
+# Bordes
 def detectar_bordes(img_cv2, imagenes_bordes, contador_bordes):
     from PIL import Image, ImageFilter
 
@@ -121,7 +116,7 @@ def detectar_bordes(img_cv2, imagenes_bordes, contador_bordes):
     print(f"{titulo} guardada como '{nombre}'.")
 
 
-# Binarización con OpenCV
+# Binarización
 def binarizar_imagen(img_cv2, imagenes_binarias, contador_binarias):
     import cv2
     from PIL import Image
@@ -139,7 +134,7 @@ def binarizar_imagen(img_cv2, imagenes_binarias, contador_binarias):
     print(f"{titulo} guardada como '{nombre}'.")
 
 
-# Detección de bordes Canny
+# Canny
 def bordes_canny(img_cv2, imagenes_canny, contador_canny):
     import cv2
     from PIL import Image

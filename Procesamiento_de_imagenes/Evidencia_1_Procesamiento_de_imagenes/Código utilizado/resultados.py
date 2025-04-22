@@ -1,3 +1,7 @@
+# resultados.py
+# Copyright (c) 2025 M. Laura Peralta
+# Todos los derechos reservados.
+
 import cv2
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -15,7 +19,6 @@ def mostrar_resultados(img_cv2, contador_rotaciones, contador_recortes, contador
     plt.figure(figsize=(12, 5 * rows))
     idx = 1
 
-    # Mostrar imagen original
     if img is not None:
         plt.subplot(rows, cols, idx)
         plt.imshow(img)
@@ -23,7 +26,6 @@ def mostrar_resultados(img_cv2, contador_rotaciones, contador_recortes, contador
         plt.axis('off')
         idx += 1
 
-    # Mostrar imágenes rotadas
     for img_rot, titulo in imagenes_rotadas:
         plt.subplot(rows, cols, idx)
         plt.imshow(img_rot)
@@ -31,7 +33,6 @@ def mostrar_resultados(img_cv2, contador_rotaciones, contador_recortes, contador
         plt.axis('off')
         idx += 1
 
-    # Mostrar imágenes recortadas
     for img_rec, titulo in imagenes_recortadas:
         plt.subplot(rows, cols, idx)
         plt.imshow(img_rec)
@@ -42,7 +43,6 @@ def mostrar_resultados(img_cv2, contador_rotaciones, contador_recortes, contador
     plt.tight_layout()
     plt.show()
 
-    # Mostrar imágenes desenfocadas
     for img_blur, info in imagenes_desenfocadas:
         plt.subplot(rows, cols, idx)
         plt.imshow(img_blur)
@@ -50,7 +50,6 @@ def mostrar_resultados(img_cv2, contador_rotaciones, contador_recortes, contador
         plt.axis('off')
         idx += 1
 
-    # Mostrar imágenes con bordes (Filtro PIL)
     for img_borde, info in imagenes_bordes:
         plt.subplot(rows, cols, idx)
         plt.imshow(img_borde)
@@ -58,7 +57,6 @@ def mostrar_resultados(img_cv2, contador_rotaciones, contador_recortes, contador
         plt.axis('off')
         idx += 1
 
-    # Mostrar imágenes binarizadas
     for img_bin, info in imagenes_binarias:
         plt.subplot(rows, cols, idx)
         plt.imshow(img_bin, cmap='gray')
@@ -66,7 +64,6 @@ def mostrar_resultados(img_cv2, contador_rotaciones, contador_recortes, contador
         plt.axis('off')
         idx += 1
 
-    # Mostrar imágenes con Canny
     for img_can, info in imagenes_canny:
         plt.subplot(rows, cols, idx)
         plt.imshow(img_can, cmap='gray')
@@ -81,49 +78,42 @@ from google.colab import files
 
 def exportar_zip(nombre_zip, img_cv2, imagenes_rotadas, imagenes_recortadas, imagenes_desenfocadas, imagenes_bordes, imagenes_binarias, imagenes_canny):
     with zipfile.ZipFile(nombre_zip, 'w') as zipf:
-        # Agregar imagen original si existe
+        
         if img_cv2 is not None:
             img_original = Image.fromarray(img_cv2)
             nombre_original = "imagen_original.jpg"
             img_original.save(nombre_original)
             zipf.write(nombre_original)
 
-        # Agregar imágenes rotadas
         for i, (img, _) in enumerate(imagenes_rotadas, start=1):
             nombre = f"rotada_{i}.jpg"
             img.save(nombre)
             zipf.write(nombre)
 
-        # Agregar imágenes recortadas
         for i, (img, _) in enumerate(imagenes_recortadas, start=1):
             nombre = f"recortada_{i}.jpg"
             img.save(nombre)
             zipf.write(nombre)
 
-        # Agregar imágenes desenfocadas
         for i, (img, _) in enumerate(imagenes_desenfocadas, start=1):
             nombre = f"blur_{i}.jpg"
             img.save(nombre)
             zipf.write(nombre)
 
-        # Agregar imágenes con bordes
         for i, (img, _) in enumerate(imagenes_bordes, start=1):
             nombre = f"bordes_{i}.jpg"
             img.save(nombre)
             zipf.write(nombre)
 
-        # Agregar imágenes binarizadas
         for i, (img, _) in enumerate(imagenes_binarias, start=1):
             nombre = f"binaria_{i}.jpg"
             img.save(nombre)
             zipf.write(nombre)
 
-        # Agregar imágenes con Canny
         for i, (img, _) in enumerate(imagenes_canny, start=1):
             nombre = f"canny_{i}.jpg"
             img.save(nombre)
             zipf.write(nombre)
 
-    # Descargar el archivo zip
     files.download(nombre_zip)
-    print(f"\nArchivo '{nombre_zip}' generado y listo para descargar.")
+    print(f"\nArchivo '{nombre_zip}' generado y descargado.")
