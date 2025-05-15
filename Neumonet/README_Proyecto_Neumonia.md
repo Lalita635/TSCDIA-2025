@@ -46,7 +46,7 @@ Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automáti
 - Stakeholders y métricas de éxito.
 - Creación del **Project Charter**.
 - Asignación de roles y estructura de trabajo.
-> Ver carpeta: `[evidencia_1_definicion_del_problema/](https://github.com/Lalita635/TSCDIA-2025/tree/main/Neumonet/Evidencia_1_%20Definici%C3%B3n_del_problema)`
+> Ver carpeta: [Evidencia_1](https://github.com/Lalita635/TSCDIA-2025/tree/main/Neumonet/Evidencia_1_%20Definici%C3%B3n_del_problema)
 
 ### 2. Análisis Exploratorio (EDA) y Fairlearn
 - Exploración inicial del dataset.
