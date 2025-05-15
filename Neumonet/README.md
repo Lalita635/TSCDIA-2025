@@ -9,32 +9,32 @@ Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automáti
 (en constante actualización hasta finalizar el proyecto)
 
 ```
-├── evidencia_1_definicion_del_problema/
+Neumonet/
+├── Evidencia_1_definicion_del_problema/
 │   ├── README.md
-│   └── ...
-├── notebooks/
-│   ├── 01_eda_fairlearn.ipynb
-│   ├── 02_preprocesamiento.ipynb
-│   ├── 03_modelado_mlflow.ipynb
-│   └── ...
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── ...
-├── src/
-│   ├── preprocessing.py
-│   ├── train.py
-│   ├── deploy.py
-│   └── ...
-├── reports/
-│   ├── data_summary.pdf
-│   ├── model_report.pdf
-│   ├── fairlearn_report.pdf
-│   └── ...
-├── mlruns/
-│   └── (MLflow tracking data)
+│   └── NEUMONET PPII.pdf
+├── Proyecto_Neumonia
+│   ├── notebooks/
+│   │   ├── Modelo_basico.ipynb
+│   ├── data/chest_xray/
+│   │   ├── test/
+│   │   │   ├── BACTERIAL_PNEUMONIA
+│   │   │   ├── NORMAL
+│   │   │   ├── VIRAL_PNEUMONIA
+│   │   ├── train/
+│   │   │   ├── BACTERIAL_PNEUMONIA
+│   │   │   ├── NORMAL
+│   │   │   ├── VIRAL_PNEUMONIA
+│   │   ├── val/
+│   │   │   ├── BACTERIAL_PNEUMONIA
+│   │   │   ├── NORMAL
+│   │   │   ├── VIRAL_PNEUMONIA
+│   ├── utils/
+│   │   ├── procesamiento.py
+│   ├── requirements.txt
+├── Guía para realizar el proyecto ABP.pdf
+├── Mi Plantilla Defensa en el Proyecto - ABP.pdf
 ├── README.md
-└── requirements.txt
 ```
 
 ---
@@ -46,44 +46,48 @@ Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automáti
 - Stakeholders y métricas de éxito.
 - Creación del **Project Charter**.
 - Asignación de roles y estructura de trabajo.
-> Ver carpeta: [Evidencia_1](https://github.com/Lalita635/TSCDIA-2025/tree/main/Neumonet/Evidencia_1_%20Definici%C3%B3n_del_problema)
+> Ver carpeta: [Evidencia 1](https://github.com/Lalita635/TSCDIA-2025/tree/main/Neumonet/Evidencia_1_%20Definici%C3%B3n_del_problema)
 
 ### 2. Análisis Exploratorio (EDA) y Fairlearn
 - Exploración inicial del dataset.
 - Identificación de variables sensibles (edad, género, etc.).
 - Visualizaciones interactivas y estadísticas descriptivas.
 - Análisis de equidad con **Fairlearn** (disparidades, proxy variables).
+> Ver carpeta: [Evidencia 2 (en proceso)]
 
 ### 3. Preparación de los Datos
 - Limpieza de datos (faltantes, outliers, errores).
 - Codificación y escalado de variables.
 - Balanceo de clases para mitigar sesgos.
 - Generación del dataset final para modelado.
+> Ver carpeta: [Evidencia 3 (en proceso)]
 
 ### 4. Modelado Inicial y Experimentación con MLflow
 - Entrenamiento de modelos básicos (e.g., Logistic Regression, Random Forest).
 - Registro y comparación de experimentos con **MLflow**.
 - Selección del mejor modelo según métricas y equidad.
+> Ver carpeta: [Evidencia 4 (en proceso)]
 
 ### 5. Despliegue del Modelo
 - Empaquetado del modelo con MLflow.
 - Exposición como API REST con Flask/FastAPI.
 - Pruebas funcionales (Postman/cURL).
 - Documentación del proceso y lecciones aprendidas.
+> Ver carpeta: [Evidencia 5 (en proceso)]
 
 ---
 
 ## 🛠️ Tecnologías y Librerías
 
-- `Python`, `Jupyter Notebooks`
+- `Python`, `Jupyter Notebooks`, `Google Colab `
 - `Scikit-learn`, `Pandas`, `Matplotlib`, `Seaborn`
 - `Fairlearn`, `MLflow`, `Plotly`
 - `Flask` o `FastAPI` para el despliegue
-- `Git`, `GitHub`, `Jira` para gestión de proyecto
+- `Git`, `GitHub` para gestión de proyecto
 
 ---
 
-## 📑 Documentos Importantes
+## 📑 Documentos Importantes (en proceso)
 
 | Documento | Descripción |
 |----------|-------------|
@@ -97,7 +101,7 @@ Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automáti
 
 ---
 
-## 👥 Equipo
+## 👥 Equipo (en definición)
 
 - **Project Manager:** ...
 - **Data Scientist:** ...
